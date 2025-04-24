@@ -1,20 +1,43 @@
 ﻿using UnityEngine;
 
 public class GroundChecker : IGroundChecker {
-	private readonly float offset;
+	private float offset;
 	private float checkRadius;
 	private readonly LayerMask groundMask;
+	private float slopeDotThreshold = 0.7f; 
 
-	public GroundChecker(float offset, LayerMask groundMask) {
-		this.offset = offset;		
+	public GroundChecker(LayerMask groundMask) {
 		this.groundMask = groundMask;
+	}
+
+	public void SetSlopeThreshold(float slopeThreshold) {
+		this.slopeDotThreshold = slopeThreshold;
 	}
 	public void CheckRadius(float radius) {
 		checkRadius = radius;
 	}
 
-	public bool IsGrounded(Vector2 position) {
+	public void SetOffset(float offset) {
+		this.offset = offset;
+	}
+
+	public bool IsGrounded(Vector2 position, out bool canJump) {
 		Vector2 origin = position + Vector2.down * offset;
-		return Physics2D.OverlapCircle(origin, checkRadius, groundMask);
+		canJump = false;
+
+		Collider2D hit = Physics2D.OverlapCircle(origin, checkRadius, groundMask);
+		if (hit) {
+			Vector2 closestPoint = hit.ClosestPoint(origin);
+			Vector2 directionToCenter = (closestPoint - origin).normalized; 
+			float dot = Vector2.Dot(Vector2.down, directionToCenter);
+			canJump = dot > slopeDotThreshold;	
+
+			return true;
+		}
+		return false;
+	}
+
+	public bool IsGrounded(Vector2 position) {
+		return IsGrounded(position, out _);
 	}
 }

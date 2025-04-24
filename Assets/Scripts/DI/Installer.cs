@@ -8,7 +8,7 @@ public class Installer : MonoBehaviour {
 
 	void Awake() {
 		container = new DIContainer();
-		container.Register<IGroundChecker>(new GroundChecker(0f, LayerMask.GetMask("Ground")));
+		container.Register<IGroundChecker>(new GroundChecker(LayerMask.GetMask("Ground")));
 		container.Register(new BallSquashAnimator());
 	}
 
