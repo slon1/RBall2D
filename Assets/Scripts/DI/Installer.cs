@@ -9,7 +9,8 @@ public class Installer : MonoBehaviour {
 	void Awake() {
 		container = new DIContainer();
 		container.Register<IGroundChecker>(new GroundChecker(LayerMask.GetMask("Ground")));
-		container.Register(new BallSquashAnimator());
+		//container.Register(new BallSquashAnimator());
+		container.Register(GetComponent<UserInput>());
 	}
 
 	public static T GetService<T>() => container.Resolve<T>();

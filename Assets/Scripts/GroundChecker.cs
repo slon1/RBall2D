@@ -36,8 +36,5 @@ public class GroundChecker : IGroundChecker {
 		}
 		return false;
 	}
-
-	public bool IsGrounded(Vector2 position) {
-		return IsGrounded(position, out _);
-	}
+	
 }

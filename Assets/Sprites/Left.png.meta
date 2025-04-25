@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5abdaadb46ef90347a302225d71dd419
+guid: a58b5c3e6888e234bb078c7f4ae5fadd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9137117592129561275
-    second: DOTweenIcon_0
+      213: -8045028078469470340
+    second: Left-right_arrow_cr_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DOTweenIcon_0
+      name: Left-right_arrow_cr_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 1
-        width: 91
-        height: 16
+        y: 0
+        width: 185
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d1522e5ff623180800000000000000
-      internalID: -9137117592129561275
+      spriteID: c77a8c646915a5090800000000000000
+      internalID: -8045028078469470340
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -144,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DOTweenIcon_0: -9137117592129561275
+      Left-right_arrow_cr_0: -8045028078469470340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
