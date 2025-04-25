@@ -13,11 +13,9 @@ public class UserInput : MonoBehaviour {
 
 
 	private void Awake() {
-
 		left.OnPressed += HandleLeft;
 		right.OnPressed += HandleRight;
 		up.OnPressed += HandleJump;
-
 	}
 
 	private void OnDestroy() {
@@ -27,9 +25,7 @@ public class UserInput : MonoBehaviour {
 	}
 
 	private void HandleLeft(bool state) => OnLeft?.Invoke(state);
-
 	private void HandleRight(bool state) => OnRight?.Invoke(state);
-
 	private void HandleJump(bool state) => OnJump?.Invoke(state);
 
 }

@@ -4,7 +4,7 @@ public class GroundChecker : IGroundChecker {
 	private float offset;
 	private float checkRadius;
 	private readonly LayerMask groundMask;
-	private float slopeDotThreshold = 0.7f; 
+	private float slopeDotThreshold = 0.7f; //45`
 
 	public GroundChecker(LayerMask groundMask) {
 		this.groundMask = groundMask;
